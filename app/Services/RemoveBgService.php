@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use Exception;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 
@@ -16,7 +17,7 @@ class RemoveBgService
 
     public function removeBackground($imagePath)
     {
-        $response = Http::withHeaders([
+        $response = Http::timeout(30)->withHeaders([
             'X-Api-Key' => $this->apiKey,
         ])->attach('image_file', file_get_contents($imagePath), basename($imagePath))
             ->post('https://api.remove.bg/v1.0/removebg');
@@ -30,6 +31,6 @@ class RemoveBgService
             return Storage::url($imageName);
         }
 
-        throw new \Exception('Error: ' . $response->body());
+        throw new Exception('Error: ' . $response->body());
     }
 }

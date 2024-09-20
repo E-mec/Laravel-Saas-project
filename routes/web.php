@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BackgroundController;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
@@ -25,6 +26,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::get('/feature2', [Feature2Controller::class, 'index'])->name('feature2.index');
     Route::post('/feature2', [Feature2Controller::class, 'calculate'])->name('feature2.calculate');
+
+    Route::get('/feature3', [BackgroundController::class, 'index'])->name('feature3.index');
+    Route::post('/remove-background', [BackgroundController::class, 'removeBackground'])->name('feature2.removeBackground');
 
     Route::get('/buy-credits', [CreditController::class, 'index'])->name('credit.index');
     Route::get('/buy-credits/success', [CreditController::class, 'success'])->name('credit.success');

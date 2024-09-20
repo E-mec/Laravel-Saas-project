@@ -36,7 +36,9 @@ export default function Authenticated({ header, children }) {
                                     Feature 2
                                 </NavLink>
 
-
+                                <NavLink href={route('feature3.index')} active={route().current('feature3.index')}>
+                                    Feature 3
+                                </NavLink>
 
                             </div>
                         </div>

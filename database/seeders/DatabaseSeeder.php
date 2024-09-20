@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
 
         Feature::create([
             'image' => 'https://static-00.iconduck.com/assets.00/plus-icon-2048*2046-z6v59bd6.png',
-            'route_name' => 'Feature1.index',
+            'route_name' => 'feature1.index',
             'name' => 'Calculate Sum',
             'description' => 'Calculate sum of two numbers',
             'required_credits' => 1,
@@ -34,7 +34,7 @@ class DatabaseSeeder extends Seeder
 
         Feature::create([
             'image' => 'https://cdn-icons-png.freepik.com/512/929/929430',
-            'route_name' => 'Feature2.index',
+            'route_name' => 'feature2.index',
             'name' => 'Calculate Difference',
             'description' => 'Calculate difference of two numbers',
             'required_credits' => 3,
@@ -43,7 +43,7 @@ class DatabaseSeeder extends Seeder
 
         Feature::create([
             'image' => 'https://cdn-icons-png.freepik.com/512/929/929430',
-            'route_name' => 'Feature3.index',
+            'route_name' => 'feature3.index',
             'name' => 'Remove Background',
             'description' => 'Remove background from images',
             'required_credits' => 2,
