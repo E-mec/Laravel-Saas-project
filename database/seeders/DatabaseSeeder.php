@@ -41,6 +41,15 @@ class DatabaseSeeder extends Seeder
             'active' => true,
         ]);
 
+        Feature::create([
+            'image' => 'https://cdn-icons-png.freepik.com/512/929/929430',
+            'route_name' => 'Feature3.index',
+            'name' => 'Remove Background',
+            'description' => 'Remove background from images',
+            'required_credits' => 2,
+            'active' => true,
+        ]);
+
         Package::create([
             'name' => 'Basic',
             'price' => 5,
